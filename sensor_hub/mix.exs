@@ -47,7 +47,7 @@ defmodule SensorHub.MixProject do
       {:ring_logger, "~> 0.10.0"},
       {:toolshed, "~> 0.3.0"},
       {:vintage_net_wifi, "~> 0.12.0", targets: @all_targets},
-      {:circuits_i2c, "~> 2.0 or ~> 1.0 or ~> 0.3.0"},
+      {:circuits_i2c, "~> 0.3.8"},
       {:sgp40, "~> 0.1.6"},
 
       # Allow Nerves.Runtime on host to support development, testing and CI.
@@ -56,6 +56,8 @@ defmodule SensorHub.MixProject do
 
       # Dependencies for all targets except :host
       {:nerves_pack, "~> 0.7.0", targets: @all_targets},
+      {:veml6030, path: "../veml6030", targets: @all_targets},
+
 
       # Dependencies for specific targets
       # NOTE: It's generally low risk and recommended to follow minor version
